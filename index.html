@@ -1,0 +1,100 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Javascript Math Demo</title>
+    </head>
+    <body>
+        <script>
+
+            var aNumber = 0;
+            var aNumber1 = 0;
+            var aNumber2 = 0;
+            var answer = 0;
+
+            //Value Ofx        
+            aNumber = prompt("We will use javascript Math.valueOf() function/method to get the value of a number.<br/>Please enter a first number: ", "") ;
+            
+            alert("The Math.valueOf() of " + aNumber + " is: " + Math.valueOf(aNumber).toString());
+            
+            //Generate a random number between 0 and 1 (NOTE: random number is will be less than 1)
+            answer = Math.random();
+            
+            alert("The Math.random() function/method generate a number between 0 and 1.<br/>Generated random number: " + answer);
+
+            //Generate a random number between 0 and number provided (NOTE: random number is will be less than the number provided)
+            aNumber = prompt("We will use javascript Math.rand(x) function/method to generate a random number.<br/>Please enter a number: ", "") 
+            answer = Math.random(aNumber) * aNumber;
+            
+            alert("Generated random number between 0 and " + aNumber + " is : " + answer);
+
+
+            //Rounding a number
+            aNumber = prompt("We will use javascript Math.round(x) function/method to round a number.<br/>Please enter a number: ", "") 
+            answer = Math.round(aNumber);
+            
+            alert("Number: "+ aNumber + "is rounded to: " + answer);
+        
+            //Rounding a number
+            aNumber = prompt("We will use javascript Math.fround(x) function/method to round a number.<br/>Please enter a number: ", "") 
+            answer = Math.fround(aNumber);
+            
+            alert("Number: "+ aNumber + "is rounded to: " + answer);
+        
+            //Compute the Square Root of a number
+            aNumber = prompt("We will use javascript Math.sqrt() function/method to compute the square root of a number.<br/>Please enter a number: ", "") 
+            answer = Math.sqrt(aNumber);
+            
+            alert("The Square Root of " + aNumber + " is: " + answer);
+            
+            //Compuate the Exponential of a number
+            aNumber = prompt("We will use javascript Math.pow() function/method to compute the square a number.<br/>Please enter a number: ", "") 
+            answer = Math.pow(aNumber,2);
+            
+            alert("The Square of " + aNumber + " is: " + answer);
+            
+            //Compute the area of a cirle
+            aNumber = prompt("We will use javascript Math.PI property to compute the area of a circlle.<br/>Please enter a radius of a circle: ", "") 
+            answer = aNumber * Math.PI;
+            
+            alert("The area of a cirle with radius " + aNumber + " is: " + answer);
+            
+            //Compute the Absolute of a number
+            aNumber = prompt("We will use javascript Math.abs() function/method to compute the absolute value of a number.<br/>Please enter a negative, 0, or positive number: ", "") 
+            answer = Math.abs(aNumber);
+            
+            alert("The absolute value of " + aNumber + " is: " + answer);
+
+            //Compute the floor of a number
+            aNumber = prompt("We will use javascript Math.floor() function/method to compute the floor value of a number.<br/>Please enter a number: ", "") 
+            answer = Math.floor(aNumber);
+            
+            alert("The floor value of " + aNumber + " is: " + answer);
+
+            //Compute the ceiling of a number
+            aNumber = prompt("We will use javascript Math.ceil() function/method to compute the ceiling value of a number.<br/>Please enter a number: ", "") 
+            answer = Math.ceil(aNumber);
+            
+            alert("The ceiling value of " + aNumber + " is: " + answer);
+
+            //Compute Minimum of a number
+            aNumber1 = prompt("We will use javascript Math.min(n, y) function/method to get the min value between x and y values.<br/>Please enter a first number: ", "") 
+            aNumber2 = prompt("We will use javascript Math.min(n, y) function/method to get the min value between x and y values.<br/>Please enter a second number: ", "") 
+            answer = Math.min(aNumber1, aNumber2);
+            
+            alert("The min of " + aNumbre1 + " and " +aNumber2 + " is: " + answer);
+
+            //Compute Max        
+            aNumber1 = prompt("We will use javascript Math.min(n, y) function/method to get the max value between x and y values.<br/>Please enter a first number: ", "") 
+            aNumber2 = prompt("We will use javascript Math.min(n, y) function/method to get the max value between x and y values.<br/>Please enter a second number: ", "") 
+            answer = Math.max(aNumber1, aNumber2);
+            
+            alert("The max of " + aNumbre1 + " and " +aNumber2 + " is: " + answer);
+            
+
+
+
+        </script>
+    </body>
+</html>
