@@ -6,8 +6,27 @@
         <title>Javascript Math Demo Using Simple "prompt" and "alert"</title>
     </head>
     <body>
+        
+        <p>Loan Amount: $<input id="loanAmount" type="number" min="1" max="1000000" onchange="calculateLoan()"></p>
+        <p>Interest Rate: <input id="loanInterestRate" type="number" min="0" max="100" value="10" step=".1" onchange="calculateLoan()">%</p>
+        <p>Months: <input id="loanNumberOfMonths" type="number" min="1" max="72" value="1" step="1" onchange="calculateLoan()"></p>
+        <h2 id="loanMonthlyPayment"></h2>
+        <button id="btnCalculateLoan" onclick="calculateLoan()" >Calculate</button>
+
         <script>
 
+            function calculateLoan() {
+                var loanAmount = document.getElementById('loanAmount').value;
+                var loanInterestRate = document.getElementById('loanInterestRate').value;
+                var loanNumberOfMonths = document.getElementById('loanNumberOfMonths').value;
+                var loanInterest = (loanAmount * (loanInterestRate * .01)) / loanNumberOfMonths;
+                var loanMonthlyPayment = ((loanAmount / loanNumberOfMonths) + loanInterest).toFixed(2);
+                
+                loanMonthlyPayment = loanMonthlyPayment.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                document.getElementById('loanMonthlyPayment').innerHTML = "Monthly Payment = $" + loanMonthlyPayment;
+            }
+
+            /*
             var aNumber = 0;
             var aNumber1 = 0;
             var aNumber2 = 0;
@@ -91,7 +110,7 @@
             answer = Math.max(aNumber1, aNumber2);
             
             alert("The max of " + aNumber1 + " and " + aNumber2 + " is: " + answer);
-
+            */
         </script>
     </body>
 </html>
